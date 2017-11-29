@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1, user-scalable=no">
+    <% for (var key in htmlWebpackPlugin.files.css) { %>
+        <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css[key] %>">
+    <% } %>
+    <script type="text/javascript">
+        window['viewportConfig'] = {
+            designWidth: <%= htmlWebpackPlugin.options.designWidth %>,
+            designFontSize: <%= htmlWebpackPlugin.options.designFontSize %>
+        };
+    </script>
+</head>
+
+<body>
+    <div id="app"></div>
+    <% if(htmlWebpackPlugin.options.isWeChat){ %>
+        <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
+    <% } %>
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks['vendors'].entry %>"></script>
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks['common'].entry %>"></script>
+    <script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks[htmlWebpackPlugin.options.name].entry %>"></script>
+</body>
+
+</html>

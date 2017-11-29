@@ -1,0 +1,7 @@
+@import '../../../../assets/styles/base.less';
+.c-viewport-has-header {
+    .paddingTop(100);
+}
+.c-viewport-has-nav {
+    .paddingBottom(98);
+}

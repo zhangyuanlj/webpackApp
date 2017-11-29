@@ -1,0 +1,5 @@
+/*路径规划*/
+
+.amap-lib-marker-from, .amap-lib-marker-mid, .amap-lib-marker-to {
+    display: none;
+}

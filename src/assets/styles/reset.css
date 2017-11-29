@@ -1,0 +1,111 @@
+/*基础变量、方法，可根据实际需要修改*/
+html {
+  overflow-x: hidden;
+}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+input,
+label,
+textarea,
+p,
+header,
+nav,
+section,
+article,
+aside,
+footer,
+figure,
+figcaption,
+menu,
+button {
+  margin: 0;
+  padding: 0;
+}
+img {
+  border: 0;
+}
+ul,
+ol {
+  list-style-type: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th,
+td,
+div {
+  word-break: break-all;
+  word-wrap: break-word;
+}
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+}
+input,
+label {
+  vertical-align: middle;
+  letter-spacing: 0;
+}
+/*去掉苹果的默认UI来渲染按钮*/
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+a,
+a:visited {
+  color: #4A4A4A;
+  text-decoration: none;
+}
+* {
+  outline: none;
+}
+body {
+  font-family: PingFang-SC-Regular, Helvetica Neue, Helvetica, microsoft yahei, sans-serif;
+  color: #4A4A4A;
+  font-size: 0.35rem;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+}
+/*定义滚动条轨道*/
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+/*定义滚动条高宽及背景*/
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: #fff;
+}
+/*定义滚动条*/
+::-webkit-scrollbar-thumb {
+  background-color: #cccadb;
+  border-radius: 2px;
+}
+input::-webkit-input-placeholder {
+  color: #707283;
+}

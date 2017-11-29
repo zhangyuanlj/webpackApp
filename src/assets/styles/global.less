@@ -1,0 +1,74 @@
+/*背景颜色*/
+
+@import 'base.less';
+html {
+    overflow-x: hidden;
+}
+
+html, body {
+    min-height: 100%;
+    background-color: @background;
+}
+
+.g-fl {
+    float: left;
+}
+
+.g-fr {
+    float: right;
+}
+
+.g-clear-fl {
+    clear: both;
+}
+
+.g-relative {
+    position: relative;
+}
+
+.g-absolute {
+    position: absolute;
+}
+
+.g-fixed {
+    position: fixed;
+}
+
+.g-text-left {
+    text-align: left;
+}
+
+.g-text-center {
+    text-align: center;
+}
+
+.g-text-right {
+    text-align: right;
+}
+
+.g-layer-none {
+    display: none;
+}
+
+.g-layer-hidden {
+    visibility: hidden;
+}
+
+.g-clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+/*去除地图LOGO*/
+
+.amap-logo, .amap-copyright {
+    display: none;
+}
+
+.amap-copyright {
+    left: 200%;
+}

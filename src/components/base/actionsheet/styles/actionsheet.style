@@ -1,0 +1,68 @@
+@import '../../../../assets/styles/base.less';
+
+/*上拉菜单*/
+
+.c-actionsheet, .c-actionsheet-pop {
+    position: fixed;
+    background-color: #EFEFF4;
+    color: #000;
+    .fontSize(36);
+    z-index: 10000;
+    display: none;
+}
+
+.c-actionsheet {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.c-actionsheet-pop {
+    width: 60%;
+    .borderRadius(10);
+    overflow: hidden;
+}
+
+.c-actionsheet-title {
+    text-align: center;
+    .padding(25, 0, 25, 0);
+    background-color: #fff;
+}
+
+.c-actionsheet-title h4 {
+    font-weight: 100;
+}
+
+.c-actionsheet-title p {
+    color: #666;
+    .fontSize(24);
+    .marginTop(15);
+}
+
+.c-actionsheet-list {
+    background-color: #fff;
+    .marginBottom(10);
+}
+
+.c-actionsheet-list .item {
+    display: block;
+    .height(100);
+    color: #000;
+    text-align: center;
+    .lineHeight(100);
+    border-top: 1rem/@baseFontSize solid #D9D9D9;
+    cursor: pointer;
+}
+
+.c-actionsheet-list:last-child {
+    margin-bottom: 0;
+}
+
+.c-actionsheet-pop .c-actionsheet-list .item {
+    border-top: 0;
+    border-bottom: 1rem/@baseFontSize solid #D9D9D9;
+}
+
+.c-actionsheet-pop .c-actionsheet-list .item:last-child {
+    border-bottom: 0;
+}

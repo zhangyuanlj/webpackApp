@@ -1,0 +1,23 @@
+@import '../../../../assets/styles/base.less';
+
+/*弹出式提示*/
+
+.c-toast {
+    position: fixed;
+    min-width: 40%;
+    max-width: 90%;
+    .padding(25, 0, 25, 0);
+    text-align: center;
+    .lineHeight(45);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    .fontSize(30);
+    .borderRadius(10);
+    .boxShadow(3, 3, 8, 0, rgba(0, 0, 0, 0.2));
+    z-index: 10000;
+    display: none;
+}
+
+.c-toast p {
+    .padding(0, 25, 0, 25);
+}

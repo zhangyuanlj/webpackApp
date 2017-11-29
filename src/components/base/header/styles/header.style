@@ -1,0 +1,65 @@
+@import '../../../../assets/styles/base.less';
+@headerBaseColor: #fff;
+@headerHeight: 100/@baseFontSize;
+.c-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: @headerHeight;
+    line-height: @headerHeight;
+    background-image: linear-gradient(0deg, #2c2c30 1%, #0f1012 100%);
+    overflow: hidden;
+    z-index: 100;
+}
+
+.c-header .left, .c-header .right {
+    position: relative;
+    z-index: 300;
+}
+
+.c-header .left {
+    float: left;
+    .marginLeft(20);
+}
+
+.c-header .right {
+    float: right;
+    .marginRight(20);
+}
+
+.c-header .text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: @headerHeight;
+}
+
+.c-header .text h4 {
+    width: 60%;
+    height: @headerHeight;
+    color: @headerBaseColor;
+    .fontSize(36);
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0 auto;
+}
+
+.c-header .icon, .c-header .icon:visited {
+    color: @headerBaseColor;
+    font-size: 0;
+    .marginRight(10);
+}
+
+.c-header .icon i {
+    .fontSize(50);
+    .marginRight(10);
+}
+
+.c-header .icon span {
+    .fontSize(26);
+    vertical-align: 5px;
+}

@@ -1,0 +1,51 @@
+{
+  "name": "app-project",
+  "version": "1.0.0",
+  "description": "这是一个基于es6+webpack移动端app解决方案，她能够帮助您快速的构建一个移动端app。",
+  "main": "modules/index/index.js",
+  "scripts": {
+    "init": "set NODE_ENV=dev&&webpack --progress --config webpack.dev.config.js",
+    "dev": "set NODE_ENV=dev&&webpack-dev-server --content-base ./dist --host 127.0.0.1 --open --inline --hot --compress --history-api-fallback --config webpack.dev.config.js",
+    "build": "set NODE_ENV=pro&&webpack --progress --hide-modules --config webpack.prod.config.js",
+    "test": "set NODE_ENV=test&&webpack --progress --hide-modules --config webpack.prod.config.js",
+    "create": "node ./build/create.js"
+  },
+  "author": "zhangyuan",
+  "license": "MIT",
+  "dependencies": {
+    "autoprefixer-loader": "^2.0.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-remove-strict-mode": "0.0.2",
+    "babel-plugin-transform-runtime": "^6.12.0",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-runtime": "^6.11.6",
+    "bundle-loader": "^0.5.5",
+    "clean-webpack-plugin": "^0.1.16",
+    "consoler": "^0.2.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^2.0.0",
+    "file-loader": "^0.8.5",
+    "fs-copy-file": "^1.0.2",
+    "html-loader": "^0.3.0",
+    "html-webpack-plugin": "^2.28.0",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "vue": "^2.2.6",
+    "vue-hot-reload-api": "^1.3.3",
+    "vue-html-loader": "^1.2.3",
+    "vue-loader": "^11.0.0",
+    "vue-router": "^2.2.1",
+    "vue-style-loader": "^1.0.0",
+    "vue-template-compiler": "^2.2.1",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1",
+    "webpack-merge": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-loose": "^8.0.0"
+  }
+}

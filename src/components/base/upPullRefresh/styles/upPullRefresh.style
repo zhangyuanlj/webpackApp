@@ -1,0 +1,72 @@
+@import '../../../../assets/styles/base.less';
+.c-up-pull-refresh {
+    position: relative;
+}
+
+.c-pull-up {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    .height(60);
+    color: #666;
+    .fontSize(24);
+    visibility: hidden;
+}
+
+.c-pull-up i {
+    display: block;
+    width: 14px;
+    height: 14px;
+    .marginRight(15);
+    background: url(../images/pull-up-loading.png) no-repeat;
+    background-size: auto 100%;
+    -webkit-animation: pullUpLoading 1s steps(12, end) infinite;
+    animation: pullUpLoading 1s steps(12, end) infinite;
+}
+
+@-webkit-keyframes pullUpLoading {
+    0% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    }
+    100% {
+        -webkit-transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+@keyframes pullUpLoading {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+.c-pull-down {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    .width(60);
+    .height(60);
+    .marginLeft(-30);
+    background: url(../images/pull-down-loading.png) no-repeat;
+    background-size: 100%;
+    transform: translateZ(0) rotate(0deg) scale(0);
+    opacity: 0;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+@media (max-width: 320px) {
+    .c-pull-up i {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .c-pull-up i {
+        width: 24px;
+        height: 24px;
+    }
+}

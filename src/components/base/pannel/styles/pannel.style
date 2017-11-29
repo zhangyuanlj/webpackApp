@@ -1,0 +1,38 @@
+/*选择面板*/
+
+@import '../../../../assets/styles/base.less';
+.c-pannel {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10000;
+}
+
+.c-pannel .title-box {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    .height(100);
+    border-bottom: 1/@baseFontSize solid #d2d2d2;
+}
+
+.c-pannel .title-box .btn {
+    display: block;
+    .width(170);
+    color: #888888;
+    .fontSize(28);
+    text-align: center;
+}
+
+.c-pannel .title-box .title {
+    -webkit-box-flex: 3;
+    text-align: center;
+    color: #000;
+    .fontSize(36);
+}
+
+.c-pannel .scroll-area {
+    position: relative;
+    overflow: hidden;
+}

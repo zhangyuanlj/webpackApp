@@ -1,0 +1,13 @@
+/*二级视图*/
+
+@import '../../../../assets/styles/base.less';
+.c-slider {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    transform: translateX(100%);
+    opacity: 0;
+    background-color: @background;
+    z-index: 1002;
+}

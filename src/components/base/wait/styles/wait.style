@@ -1,0 +1,75 @@
+@import '../../../../assets/styles/base.less';
+
+/*请求等待*/
+
+.c-wait {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    .width(180);
+    .height(180);
+    .marginLeft(-90);
+    .marginTop(-90);
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    .borderRadius(10);
+    z-index: 9999;
+}
+
+.c-wait .wrapper {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.c-wait i {
+    display: block;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: waitLoading 1s steps(12, end) infinite;
+    animation: waitLoading 1s steps(12, end) infinite;
+    background: transparent url('../images/loading.png') no-repeat;
+    background-size: 100%;
+}
+
+@media (min-width: 375px) {
+    .c-wait i {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media (min-width: 768px) {
+    .c-wait i {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@-webkit-keyframes waitLoading {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+@keyframes waitLoading {
+    0% {
+        transform: rotate3d(0, 0, 1, 0deg);
+    }
+    100% {
+        transform: rotate3d(0, 0, 1, 360deg);
+    }
+}
+
+.c-wait span {
+    display: block;
+    .fontSize(24);
+    .marginTop(15);
+}

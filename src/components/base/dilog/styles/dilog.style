@@ -1,0 +1,71 @@
+@import '../../../../assets/styles/base.less';
+
+/*对话框*/
+
+@radiusValue: 8;
+.c-dilog {
+    position: fixed;
+    width: 80%;
+    color: #888;
+    background-color: #fff;
+    .borderRadius(@radiusValue);
+    z-index: 10000;
+    display: none;
+}
+
+.c-dilog-title {
+    text-align: center;
+    .marginTop(50);
+}
+
+.c-dilog-title h4 {
+    color: #000;
+    .fontSize(36);
+    font-weight: 100;
+}
+
+.c-dilog-con {
+    color: #888;
+    .fontSize(30);
+    .padding(30, 55, 48, 55);
+}
+
+.c-dilog-con .dilog-text {
+    .lineHeight(36);
+    .marginBottom(12);
+}
+
+.c-dilog-con .dilog-text:last-child {
+    margin-bottom: 0;
+}
+
+.c-dilog-btn {
+    display: -webkit-box;
+    -webkit-box-align: center;
+    .height(100);
+    border-top: 1/@baseFontSize solid #e5e5e5;
+}
+
+.c-dilog-btn a, .c-dilog-btn a:visited {
+    display: block;
+    -webkit-box-flex: 1;
+    width: 54.3%;
+    text-align: center;
+    .lineHeight(100);
+    color: #90c42f;
+    .fontSize(36);
+}
+
+.c-dilog-btn a:first-child, .c-dilog-btn a:first-child:visited {
+    color: #353535;
+    border-right: 1/@baseFontSize solid #e5e5e5;
+}
+
+.c-dilog-btn-single {
+    -webkit-box-pack: center;
+}
+
+.c-dilog-btn-single a:first-child, .c-dilog-btn-single a:first-child:visited {
+    color: #90c42f;
+    border-right: 0;
+}

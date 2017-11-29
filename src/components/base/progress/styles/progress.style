@@ -1,0 +1,14 @@
+@import '../../../../assets/styles/base.less';
+
+/*进度条组件*/
+
+@background: #90c42f;
+.c-progress-bar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 0;
+    .height(4);
+    background-color: @background;
+    z-index: 10000;
+}
