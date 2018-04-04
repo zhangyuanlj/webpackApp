@@ -84,31 +84,27 @@ class Picker extends Component {
             tmp = tmp.replace(/{height}/g, height);
             tmp = tmp.replace(/{item}/g, this.renderItem(list));
             $display.append(tmp);
-            ((itemId, itemIndex) => {
-                let self = this;
-                let $selected = $("#" + itemId + " li[class*='" + SELECTED_STYLE + "']");
-                let selectedIndex = $selected.index();
-                $selected = $("#" + itemId + " li").eq(selectedIndex - TOP_EMPTY_NUM)[0];
-                this.destroyItem(itemId);
-                this.itemScroll[itemId] = new IScrollModule.iScroll(itemId, {
-                    snap: "li",
-                    hScroll: false,
-                    vScrollbar: false,
-                    onBeforeScrollStart: null,
-                    onScrollEnd() {
-                        let scrollEndCallback = items[itemIndex].scrollEndCallback;
-                        let $scrollItem = $("#" + itemId + " ." + ITEM_CALSS_NAME);
-                        if (this.pagesY.length > $scrollItem.length) {
-                            this.pagesY.splice(0 - TOP_EMPTY_NUM * 2, TOP_EMPTY_NUM * 2);
-                        }
-                        let index = $.inArray(this.y, this.pagesY);
-                        $scrollItem.removeClass(SELECTED_STYLE);
-                        $scrollItem.eq(index).addClass(SELECTED_STYLE);
-                        scrollEndCallback && scrollEndCallback(itemId);
+            let self = this;
+                let $selected = $("#" + id + " li").eq(selectedIndex - TOP_EMPTY_NUM)[0];
+            this.destroyItem(id);
+            this.itemScroll[id] = new IScrollModule.iScroll(id, {
+                snap: "li",
+                hScroll: false,
+                vScrollbar: false,
+                onBeforeScrollStart: null,
+                onScrollEnd() {
+                    let scrollEndCallback = items[i].scrollEndCallback;
+                    let $scrollItem = $("#" + id + " ." + ITEM_CALSS_NAME);
+                    if (this.pagesY.length > $scrollItem.length) {
+                        this.pagesY.splice(0 - TOP_EMPTY_NUM * 2, TOP_EMPTY_NUM * 2);
                     }
-                });
-                this.itemScroll[itemId].scrollToElement($selected, SCROLL_SPEED);
-            })(id, i);
+                    let index = $.inArray(this.y, this.pagesY);
+                    $scrollItem.removeClass(SELECTED_STYLE);
+                    $scrollItem.eq(index).addClass(SELECTED_STYLE);
+                    scrollEndCallback && scrollEndCallback(id);
+                }
+            });
+            this.itemScroll[id].scrollToElement($selected, SCROLL_SPEED);
         }
     }
     /**
